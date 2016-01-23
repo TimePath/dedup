@@ -78,8 +78,8 @@ fn main() {
 		i += files.len();
 		println!("\n_log {}/{}", i, total);
 		println!("HASH={}", id);
-		fn esc(s: &str) -> String { s.replace("\\", "\\\\").replace("'", "\\'") }
-		println!("_dup '{}'", esc(&files[0]));
-		for file in files { println!("_ref '{}'", esc(file)); }
+		fn esc(s: &str) -> String { s.replace("\\", "\\\\").replace("\"", "\\\"").replace("$", "\\$").replace("`", "\\`") }
+		println!("_dup \"{}\"", esc(&files[0]));
+		for file in files { println!("_ref \"{}\"", esc(file)); }
 	}
 }
