@@ -1,0 +1,10 @@
+[package]
+name = "dedup"
+version = "0.1.0"
+authors = ["TimePath <andrew.hardaker1995@gmail.com>"]
+
+[dependencies]
+argparse = "0.2.1"
+multimap = "0.1.0"
+rust-crypto = "0.2.34"
+walkdir = "0.1.5"
